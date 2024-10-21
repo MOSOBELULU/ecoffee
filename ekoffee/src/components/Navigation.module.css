@@ -1,0 +1,7 @@
+.navPic{
+    height: 250px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 10px 10px 50% 50%;
+  margin-bottom: 1rem;
+}
