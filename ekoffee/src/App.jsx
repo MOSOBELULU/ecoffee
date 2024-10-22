@@ -8,9 +8,7 @@ function App() {
   return (
     <>
       <Navigation />
-      <Home />
-      <h1>HEllo koffee lover</h1>
-       
+      <Home />  
     </>
   )
 }

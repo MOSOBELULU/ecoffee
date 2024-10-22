@@ -1,5 +1,55 @@
+/* Header background color */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #eebbbb; 
+  position: relative;
+}
+.navWrapper {
+  position: relative;
+}
+
+/* Navigation bar container */
+.navbar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 20px;
+  position: absolute; 
+  width: 100%; 
+  z-index: 10;
+}
+
+/* Logo styling */
+.logo {
+  height: 60px; 
+  width: auto;
+}
+
+/* Navigation links container */
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin-right: 20px;
+}
+
+
+/* Individual link styling */
+.navLinks li a {
+  text-decoration: none;
+  color: #ececec; 
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.navLinks li a:hover {
+  color: #ff6347; 
+}
 .navPic{
-    height: 250px;
+  height: 250px;
   width: 250px;
   object-fit: cover;
   border-radius: 10px 10px 50% 50%;

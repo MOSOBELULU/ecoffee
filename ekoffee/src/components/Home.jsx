@@ -1,39 +1,57 @@
+/*eslint-disable*/
 import { useEffect, useState } from "react"
+import { fetchCoffeeData } from "../CoffeeApi"
+import CoffeeItem from "./CoffeeItem"
 import classes from './Home.module.css'
+
+
 function Home(){
-    const [data, setData] = useState([])
-    const getData = async () => {
-        try {
-          const resp = await fetch('https://api.sampleapis.com/coffee/hot');
-          const json = await resp.json();
-          setData(json);
-        } catch (err) {
-            setData([]);
-          setData(err.message);
-        }
-      }
-      useEffect(() => {
-        getData();
-      }, []);
+    //set states
+    const [data, setData] = useState([]);
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);      
+
+//fetch data
+   useEffect(() => {
+       const getData = async () => {
+           try {
+             const coffeeData = await fetchCoffeeData();
+             setData(coffeeData);
+             setLoading(false);
+           } catch (err) {
+             setData(err.message);
+             setLoading(false)
+           }
+         }
+         getData()
+   }, []) 
+     
+       
+
+
     return(
-        <>
          <>
+            <div className={classes.container} >
             <h1>Hot Coffee Menu</h1>
+            {loading && <p>Loading...</p>}
+            {error && <p>{error}</p>}
             <ul>
-                {data.length > 0 ? (
+                {!loading && !error && data.length > 0 ? (
                     data.map((item) => (
-                        <li key={item.id}>
-                            <img src={item.image} alt='coffeeImg' className={classes.coffeeImg} />
-                            <h3>{item.title}</h3>
-                            <p>{item.description}</p>
-                        </li>
+                        <CoffeeItem
+                            key={item.id}
+                            image={item.image}
+                            title={item.title}
+                            description={item.description}
+                        />
                     ))
                 ) : (
-                    <p>Loading or no data available</p>
+                    !loading && <p>No data available</p>
                 )}
             </ul>
+        </div>
         </>
-        </>
+    
     )
 
 }
