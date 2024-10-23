@@ -56,3 +56,8 @@
   border-radius: 0px 0px 50% 50%;
   margin-bottom: 1rem;
 }
+
+.section{
+  align-items: center;
+  padding-top: 100px ;
+}
