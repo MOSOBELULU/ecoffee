@@ -26,7 +26,7 @@ function Home() {
 
     return (
         <div className={classes.container}>
-            <h1>Hot Coffee Menu</h1>
+            <h1>What we have for you</h1>
             {loading && <p>Loading...</p>}
             {error && <p>{error}</p>}
             <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
