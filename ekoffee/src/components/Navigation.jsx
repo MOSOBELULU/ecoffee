@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import classes from './Navigation.module.css'
 function Navigation() {
 
@@ -19,10 +20,10 @@ function Navigation() {
             <div className={classes.navWrapper}>
         <nav className={classes.navbar}>
             <ul className={classes.navLinks}>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Gallery</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/menu">Menu</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/gallery">Gallery</Link></li>
                 </ul>
         </nav>
         <img src='/images/navPic.jpg' className={classes.navPic} alt='navPic' />
