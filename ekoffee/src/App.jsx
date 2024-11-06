@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 import Home from './components/Home'
 import Menu from './components/pages/Menu'
 import Contact from './components/pages/Contact'
@@ -16,6 +17,7 @@ function App() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/gallery" element={<Gallery />} />
     </Routes>
+    <Footer />
   </Router>
   )
 }
