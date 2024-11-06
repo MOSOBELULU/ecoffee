@@ -1,9 +1,9 @@
-
+import Header from "./Header";
 function Home() {
    
 
     return (
-        <h1>home</h1>
+        <Header />
     )
 }
 
