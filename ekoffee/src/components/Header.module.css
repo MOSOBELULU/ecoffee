@@ -1,0 +1,41 @@
+/* Header container */
+.header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  
+  padding: 0 20px; 
+  height: 550px;
+}
+
+/* Left section styling */
+.section {
+  flex: 1;
+  padding-top: 180px;
+  padding-left: 80px;
+  max-width: 60%; 
+  
+}
+
+/* Button styling */
+.btnExplore {
+  background-color: rgb(221, 56, 56);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btnExplore:hover {
+  background-color: rgb(200, 50, 50); 
+}
+
+/* Image styling */
+.navPic {
+  height: 550px;
+  width: auto; 
+  object-fit: cover;
+  border-radius: 0 0 40% 40%;
+  margin-right: 50px;
+}
